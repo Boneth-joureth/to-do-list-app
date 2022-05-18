@@ -3,10 +3,27 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Realm from "realm";
 
+const Cat = {
+  name: "Cat",
+  properties: {
+    _id: "objectId",
+    name: "kittycat",
+    age: "18",
+    type: "string",
+  },
+};
+// open a local realm with the 'Cat' schema
+const realm = await Realm.open({
+  schema: [Cat],
+});
+
+const cats = realm.objects("Cat");
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>There are ${cats.length} cats</Text>
+      <Text>Amogus</Text>
       <StatusBar style="auto" />
     </View>
   );
