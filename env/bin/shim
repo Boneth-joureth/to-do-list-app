@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-export NODE_PATH='/home/sharedFolder/School/Mobile App Development/git-projects/to-do-list-app/env/lib/node_modules'
-export NPM_CONFIG_PREFIX='/home/sharedFolder/School/Mobile App Development/git-projects/to-do-list-app/env'
-export npm_config_prefix='/home/sharedFolder/School/Mobile App Development/git-projects/to-do-list-app/env'
-exec 'env/bin/node' "$@"
